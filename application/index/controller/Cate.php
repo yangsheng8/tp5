@@ -5,9 +5,6 @@ class Cate extends  Controller
 {
     public function index()
     {
-        return $this->fetch();
-    }
-    public function index2(){
-        return "123";
+        return $this->fetch('cate');
     }
 }
