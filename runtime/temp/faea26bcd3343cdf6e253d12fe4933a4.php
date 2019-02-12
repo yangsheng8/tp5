@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\admin\add.htm";i:1549966014;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1549953525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:66:"D:\Program\www\tp5\public/../application/admin\view\admin\edit.htm";i:1549970519;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1549953525;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
@@ -163,7 +163,7 @@
                                         <li>
                         <a href="<?php echo url('admin/lst'); ?>">管理员管理</a>
                     </li>
-                                        <li class="active">添加管理员</li>
+                                        <li class="active">编辑管理员信息</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -175,15 +175,16 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增管理员</span>
+                <span class="widget-caption">编辑管理员信息</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post">
+                        <input type="hidden" name="id" value="<?php echo $admins['id']; ?>">
                         <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">管理员名</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="username"  type="text">
+                                <input class="form-control" id="username" placeholder="" name="username"  type="text" value="<?php echo $admins['username']; ?>">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
@@ -193,7 +194,7 @@
                             <div class="col-sm-6">
                                 <input class="form-control" id="password" placeholder="" name="password"  type="text">
                             </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
+                            <p class="help-block col-sm-4 red">* 留空则表示不修改密码</p>
                         </div>  
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">

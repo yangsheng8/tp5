@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\Program\www\tp5\public/../application/admin\view\index\index.htm";i:1549945433;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549945123;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1549945333;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\Program\www\tp5\public/../application/admin\view\index\index.htm";i:1549954032;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1549953525;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>闲杂人等，不得入内</title>
+    <title>町中</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
         <div class="navbar-container">
             <!-- Navbar Barnd -->
             <div class="navbar-header pull-left">
-                <a href="#" class="navbar-brand">
+                <a href="<?php echo url('Index/index'); ?>" class="navbar-brand">
                     <small>
                             <img src="http://127.0.0.1/tp5/public/static/admin/images/logo.png" alt="">
                         </small>
@@ -103,7 +103,7 @@
             </a>
             <ul class="submenu">
                 <li>
-                    <a href="/admin/document/index.html">
+                    <a href="<?php echo url('admin/lst'); ?>">
                         <span class="menu-text">
                             管理列表                                    </span>
                         <i class="menu-expand"></i>
@@ -166,8 +166,8 @@
                 <div class="page-body">
                     
 				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                 博客项目开发<br>
-                <p style="color:#aaa;">11111</p></div>
+                 博客<br>
+                <p style="color:#aaa;">后台</p></div>
                 </div>
                 
 
