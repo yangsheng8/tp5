@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\admin\add.htm";i:1549966014;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550029580;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\links\add.htm";i:1550027023;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550024919;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>管理员添加</title>
+    <title>友情链接添加</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,23 +110,7 @@
                     </a>
                 </li>
             </ul>                            
-        </li>
-        <li>
-                <a href="#" class="menu-dropdown">
-                    <i class="menu-icon fa fa-th-list"></i>
-                    <span class="menu-text">栏目管理</span>
-                    <i class="menu-expand"></i>
-                </a>
-                <ul class="submenu">
-                    <li>
-                        <a href="<?php echo url('cate/lst'); ?>">
-                            <span class="menu-text">
-                                栏目列表                              </span>
-                            <i class="menu-expand"></i>
-                        </a>
-                    </li>
-                </ul>                            
-            </li> 
+        </li> 
 
         <li>
             <a href="#" class="menu-dropdown">
@@ -193,9 +177,9 @@
                         <a href="#">系统</a>
                     </li>
                                         <li>
-                        <a href="<?php echo url('admin/lst'); ?>">管理员管理</a>
+                        <a href="<?php echo url('links/lst'); ?>">友情链接管理</a>
                     </li>
-                                        <li class="active">添加管理员</li>
+                                        <li class="active">添加友情链接</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -207,26 +191,33 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增管理员</span>
+                <span class="widget-caption">新增友情链接</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">管理员名</label>
+                            <label for="title" class="col-sm-2 control-label no-padding-right">友情链接标题</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="username"  type="text">
+                                <input class="form-control" id="title" placeholder="" name="title"  type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
                         <div class="form-group">
-                            <label for="group_id" class="col-sm-2 control-label no-padding-right">管理员密码</label>
+                            <label for="url" class="col-sm-2 control-label no-padding-right">链接地址</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="password" placeholder="" name="password"  type="text">
+                                <input class="form-control" id="url" placeholder="" name="url"  type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>  
+                        
+                        <div class="form-group">
+                            <label for="desc" class="col-sm-2 control-label no-padding-right">链接描述</label>
+                            <div class="col-sm-6">
+                                <textarea name="desc" class="form-control"></textarea>
+                            </div>
+                        </div> 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-default">保存信息</button>

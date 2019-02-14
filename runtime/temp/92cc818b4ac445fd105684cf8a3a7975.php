@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\admin\add.htm";i:1549966014;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550029580;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"D:\Program\www\tp5\public/../application/admin\view\cate\add.htm";i:1550039917;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550029580;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
-    <title>管理员添加</title>
+    <title>栏目添加</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -193,9 +193,9 @@
                         <a href="#">系统</a>
                     </li>
                                         <li>
-                        <a href="<?php echo url('admin/lst'); ?>">管理员管理</a>
+                        <a href="<?php echo url('cate/lst'); ?>">栏目管理</a>
                     </li>
-                                        <li class="active">添加管理员</li>
+                                        <li class="active">添加栏目</li>
                                         </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -207,26 +207,18 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增管理员</span>
+                <span class="widget-caption">新增栏目</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">管理员名</label>
+                            <label for="catename" class="col-sm-2 control-label no-padding-right">栏目名称</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="username"  type="text">
+                                <input class="form-control" id="catename" placeholder="" name="catename"  type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="group_id" class="col-sm-2 control-label no-padding-right">管理员密码</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="password" placeholder="" name="password"  type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>  
+                        </div> 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-default">保存信息</button>

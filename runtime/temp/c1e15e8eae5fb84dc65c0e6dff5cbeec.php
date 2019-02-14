@@ -1,8 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\admin\add.htm";i:1549966014;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550029580;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"D:\Program\www\tp5\public/../application/admin\view\cate\lst.htm";i:1550038638;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550029580;}*/ ?>
 <!DOCTYPE html>
-<html><head>
-	    <meta charset="utf-8">
-    <title>管理员添加</title>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>栏目列表</title>
 
     <meta name="description" content="Dashboard">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +20,11 @@
     <link href="http://127.0.0.1/tp5/public/static/admin/style/demo.css" rel="stylesheet">
     <link href="http://127.0.0.1/tp5/public/static/admin/style/typicons.css" rel="stylesheet">
     <link href="http://127.0.0.1/tp5/public/static/admin/style/animate.css" rel="stylesheet">
-    
+
 </head>
+
 <body>
-	<!-- 头部 -->
+    <!-- 头部 -->
     <div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -79,11 +82,12 @@
         </div>
     </div>
 </div>
-	<!-- /头部 -->
-	
-	<div class="main-container container-fluid">
-		<div class="page-container">
-			<!-- Page Sidebar -->
+
+    <!-- /头部 -->
+
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
             <div class="page-sidebar" id="sidebar">
     <!-- Page Sidebar Header-->
     <div class="sidebar-header-wrapper">
@@ -189,70 +193,82 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li>
-                        <a href="#">系统</a>
-                    </li>
-                                        <li>
-                        <a href="<?php echo url('admin/lst'); ?>">管理员管理</a>
-                    </li>
-                                        <li class="active">添加管理员</li>
-                                        </ul>
+                        <li>
+                            <a href="#">系统</a>
+                        </li>
+                        <li class="active">栏目管理</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-                    
-<div class="row">
-    <div class="col-lg-12 col-sm-12 col-xs-12">
-        <div class="widget">
-            <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">新增管理员</span>
-            </div>
-            <div class="widget-body">
-                <div id="horizontal-form">
-                    <form class="form-horizontal" role="form" action="" method="post">
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">管理员名</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="username"  type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="group_id" class="col-sm-2 control-label no-padding-right">管理员密码</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="password" placeholder="" name="password"  type="text">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>  
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">保存信息</button>
+                    <button type="button" tooltip="添加栏目" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('cate/add'); ?>'">
+                        <i class="fa fa-plus"></i> Add
+                    </button>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-xs-12">
+                            <div class="widget">
+                                <div class="widget-body">
+                                    <div class="flip-scroll">
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="">
+                                                <tr>
+                                                    <th class="text-center">ID</th>
+                                                    <th class="text-center">栏目名称</th>
+                                                    <th class="text-center">操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                                                <tr>
+                                                    <td align="center"><?php echo $vo['id']; ?></td>
+                                                    <td align="center"><?php echo $vo['catename']; ?></td>
+                                                    <td align="center">
+                                                        <a href="<?php echo url('cate/edit',array('id'=>$vo['id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                                            <i class="fa fa-edit"></i> 编辑
+                                                        </a>
+                                                      
+                                                        <a href="#" onClick="warning('确实要删除吗', '<?php echo url('cate/del',array('id'=>$vo['id'])); ?>')"
+                                                            class="btn btn-danger btn-sm shiny">
+                                                            <i class="fa fa-trash-o"></i> 删除
+                                                        </a>
+                                                
+                                                    </td>
+                                                </tr>
+                                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="3"><?php echo $list->render(); ?></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                    <div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    </div>
 
                 </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-		</div>	
-	</div>
+        </div>
+    </div>
 
-	    <!--Basic Scripts-->
+    <!--Basic Scripts-->
     <script src="http://127.0.0.1/tp5/public/static/admin/style/jquery_002.js"></script>
     <script src="http://127.0.0.1/tp5/public/static/admin/style/bootstrap.js"></script>
     <script src="http://127.0.0.1/tp5/public/static/admin/style/jquery.js"></script>
     <!--Beyond Scripts-->
     <script src="http://127.0.0.1/tp5/public/static/admin/style/beyond.js"></script>
-    
 
 
-</body></html>
+
+</body>
+
+</html>

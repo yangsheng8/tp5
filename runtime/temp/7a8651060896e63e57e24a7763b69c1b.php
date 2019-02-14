@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\admin\lst.htm";i:1549969268;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1549953525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:65:"D:\Program\www\tp5\public/../application/admin\view\admin\lst.htm";i:1549969268;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550029580;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -114,7 +114,23 @@
                     </a>
                 </li>
             </ul>                            
-        </li> 
+        </li>
+        <li>
+                <a href="#" class="menu-dropdown">
+                    <i class="menu-icon fa fa-th-list"></i>
+                    <span class="menu-text">栏目管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+                <ul class="submenu">
+                    <li>
+                        <a href="<?php echo url('cate/lst'); ?>">
+                            <span class="menu-text">
+                                栏目列表                              </span>
+                            <i class="menu-expand"></i>
+                        </a>
+                    </li>
+                </ul>                            
+            </li> 
 
         <li>
             <a href="#" class="menu-dropdown">
@@ -131,8 +147,24 @@
                     </a>
                 </li>
             </ul>                            
-        </li> 
+        </li>
 
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-link"></i>
+                <span class="menu-text">友情链接</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo url('links/lst'); ?>">
+                        <span class="menu-text">
+                            链接列表                              </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>                            
+        </li> 
         <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>

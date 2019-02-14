@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\Program\www\tp5\public/../application/admin\view\index\index.htm";i:1549954032;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1549953525;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\Program\www\tp5\public/../application/admin\view\index\index.htm";i:1549954032;s:56:"D:\Program\www\tp5\application\admin\view\common\top.htm";i:1549953780;s:57:"D:\Program\www\tp5\application\admin\view\common\left.htm";i:1550024919;}*/ ?>
 <!DOCTYPE html>
 <html><head>
 	    <meta charset="utf-8">
@@ -127,8 +127,24 @@
                     </a>
                 </li>
             </ul>                            
-        </li> 
+        </li>
 
+        <li>
+            <a href="#" class="menu-dropdown">
+                <i class="menu-icon fa fa-link"></i>
+                <span class="menu-text">友情链接</span>
+                <i class="menu-expand"></i>
+            </a>
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo url('links/lst'); ?>">
+                        <span class="menu-text">
+                            链接列表                              </span>
+                        <i class="menu-expand"></i>
+                    </a>
+                </li>
+            </ul>                            
+        </li> 
         <li>
             <a href="#" class="menu-dropdown">
                 <i class="menu-icon fa fa-gear"></i>
